@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2022-10-02T20:01:23.211Z",
+    "end": "2022-10-02T20:01:23.307Z",
+    "duration": 96,
+    "testsRegistered": 1,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4866807-9cfa-4eb9-b27c-d203dc335108",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestSliderReadMore.spec.js",
+      "file": "cypress\\TestArcanetinmen\\TestSliderReadMore.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2544cd46-7af9-40fa-ba1a-ecf42037090c",
+          "title": "AT Brandsite Automation Suite V",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity II Read More",
+              "fullTitle": "AT Brandsite Automation Suite V AT Brandsite Sanity II Read More",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "80620a25-d127-454c-87c3-d753ef3f67e9",
+              "parentUUID": "2544cd46-7af9-40fa-ba1a-ecf42037090c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "80620a25-d127-454c-87c3-d753ef3f67e9"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

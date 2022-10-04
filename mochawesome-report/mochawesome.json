@@ -1,0 +1,102 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2022-09-24T19:33:57.322Z",
+    "end": "2022-09-24T19:33:57.407Z",
+    "duration": 85,
+    "testsRegistered": 1,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6bbe5b66-3767-4c9f-b445-b827eeb38538",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestSliderReadMore.spec.js",
+      "file": "cypress\\TestArcanetinmen\\TestSliderReadMore.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66e14102-1ffe-4625-b73e-df3fe508f39e",
+          "title": "AT Brandsite Automation Suite V",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity II Read More",
+              "fullTitle": "AT Brandsite Automation Suite V AT Brandsite Sanity II Read More",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a8d4fcbc-0b0a-4c2d-ac72-72f57fe7f898",
+              "parentUUID": "66e14102-1ffe-4625-b73e-df3fe508f39e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "a8d4fcbc-0b0a-4c2d-ac72-72f57fe7f898"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

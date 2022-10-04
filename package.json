@@ -1,0 +1,43 @@
+{
+  "name": "at-brandwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge cypress\\reports\\html\\.jsons\\*.json > cypress\\reports\\mochareports\\report.json",
+    "generate-report": "marge cypress\\reports\\mochareports\\report.json -f report -o cypress\\reports\\mochareports",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "mtest": "npm run scripts || npm run posttest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@cypress/webpack-preprocessor": "^5.13.0",
+    "babel-loader": "^8.2.5",
+    "cypress": "^10.9.0",
+    "cypress-mailosaur": "^2.12.0",
+    "cypress-multi-reporters": "^1.6.1",
+    "cypress-promise": "^1.1.0",
+    "mocha": "^10.0.0",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0",
+    "webpack": "^5.74.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-recurse": "^1.23.0",
+    "faker": "^5.5.3",
+    "mocha-junit-reporter": "^2.0.2"
+  }
+}

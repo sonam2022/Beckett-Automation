@@ -1,0 +1,799 @@
+{
+  "stats": {
+    "suites": 12,
+    "tests": 14,
+    "passes": 0,
+    "pending": 12,
+    "failures": 2,
+    "start": "2022-10-02T19:56:01.722Z",
+    "end": "2022-10-02T20:01:23.307Z",
+    "duration": 210197,
+    "testsRegistered": 14,
+    "passPercent": 0,
+    "pendingPercent": 85.71428571428571,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54bb72ef-5cdf-4fe8-ad62-094d81648655",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopMyAccountOrderdetails.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopMyAccountOrderdetails.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d658ee56-36de-4f2a-8ffd-50b2373f196d",
+          "title": "Navigate to My Account_Order Details",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Order details and History Management",
+              "fullTitle": "Navigate to My Account_Order Details Order details and History Management",
+              "timedOut": null,
+              "duration": 139547,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/DSWebshopMyAccountOrderdetails.specs.js/Navigate to My Account_Order Details --       Order details and History Management (failed).png\"",
+              "code": "cy.get('span[class=\"link-item\"]').contains('Order history and details').click();\ncy.get('tbody').each(($el, index, $list) => {\n  // grabbing all text from second column\n  const txt = $el.text();\n  console.log(txt); // checking the matching condition\n  if (txt.includes('Sleeve Crafter')) {\n    // capturing the next sibling with the help of next() method\n    for (var i = 1; i <= 10; i++) {\n      console.log(i);\n      const product = `tbody > :nth-child(${i}) > :nth-child(${i})`;\n      cy.get(product).eq(index).next().then(function (desc) {\n        // capturing the text of next sibling\n        const rsl = desc.text();\n        console.log(rsl); //assertion to verify the text\n        cy.contains(\"Details\").each(el => {\n          cy.wrap(el).click();\n          console.log(cy.url());\n          cy.go('back');\n        });\n      });\n    }\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: ``, but never found it. Queried from element: <td.text-sm-center.order-actions>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: ``, but never found it. Queried from element: <td.text-sm-center.order-actions>\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMyAccountOrderdetails.specs.js:31:29)",
+                "diff": null
+              },
+              "uuid": "48e520d4-9b2b-4917-a42a-1be450f9f3c9",
+              "parentUUID": "d658ee56-36de-4f2a-8ffd-50b2373f196d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "48e520d4-9b2b-4917-a42a-1be450f9f3c9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 139547,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "22709fb5-31ab-491f-8547-c42c7a68fb54",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopMyAccountRewardPoints.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopMyAccountRewardPoints.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77b15619-5fe6-48d1-b017-259249e6252b",
+          "title": "Navigate to My Account_Rewards_History",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Rewards Management",
+              "fullTitle": "Navigate to My Account_Rewards_History Rewards Management",
+              "timedOut": null,
+              "duration": 70650,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/DSWebshopMyAccountRewardPoints.specs.js/Navigate to My Account_Rewards_History --       Rewards Management (failed).png\"",
+              "code": "cy.get('span[class=\"link-item\"]').contains('My rewards account').click();\n(0, _cypressRecurse.recurse)(() => cy.get('.pagination'), $next => $next.hasClass('disabled'));",
+              "err": {
+                "message": "Error: Max time limit reached",
+                "estack": "Error: Max time limit reached\n    at Context.eval (webpack:///./node_modules/cypress-recurse/src/index.js:116:0)",
+                "diff": null
+              },
+              "uuid": "c7a490c9-599d-41a3-bd00-9fe912972f3a",
+              "parentUUID": "77b15619-5fe6-48d1-b017-259249e6252b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c7a490c9-599d-41a3-bd00-9fe912972f3a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 70650,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2ce9615a-974c-45f5-be6b-58a064907f95",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopMyAccount_AddressManagement.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopMyAccount_AddressManagement.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df52ef31-f352-494e-a990-e5f77a2b23f3",
+          "title": "Navigate to My Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to My Address",
+              "fullTitle": "Navigate to My Account Navigate to My Address",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "682e06a0-7724-4762-bfef-51cef679efa6",
+              "parentUUID": "df52ef31-f352-494e-a990-e5f77a2b23f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "682e06a0-7724-4762-bfef-51cef679efa6"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "50c47aaa-49d6-4b90-bb6c-c46de37a7558",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopUserRegistration.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopUserRegistration.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cef70208-a946-4e90-add2-af13e0ced075",
+          "title": "User registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register successfully done",
+              "fullTitle": "User registration Register successfully done",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "55ff3b49-8b45-48da-8449-fadab5efbd08",
+              "parentUUID": "cef70208-a946-4e90-add2-af13e0ced075",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Account Activation Email",
+              "fullTitle": "User registration Account Activation Email",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f0af468c-625a-487c-bcd3-f573cfee58a5",
+              "parentUUID": "cef70208-a946-4e90-add2-af13e0ced075",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "55ff3b49-8b45-48da-8449-fadab5efbd08",
+            "f0af468c-625a-487c-bcd3-f573cfee58a5"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "20f9e752-5180-41c3-b0a6-f2ec416e6ea4",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestAllLinks.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestAllLinks.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9f03af1f-b1ab-4977-84e3-dbd73a4d2f32",
+          "title": "AT Brandsite Automation Suite I",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity I Footer links",
+              "fullTitle": "AT Brandsite Automation Suite I AT Brandsite Sanity I Footer links",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "d6374102-dd8f-410b-986b-8ad98d9b609c",
+              "parentUUID": "9f03af1f-b1ab-4977-84e3-dbd73a4d2f32",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "d6374102-dd8f-410b-986b-8ad98d9b609c"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7babe65c-25b1-44d5-b0c3-cb0cb8a91db6",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestATWebsite.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestATWebsite.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d95658a9-0448-46cb-961a-fb98d3c127c2",
+          "title": "AT Brandsite Automation Suite II",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity II Menu Links",
+              "fullTitle": "AT Brandsite Automation Suite II AT Brandsite Sanity II Menu Links",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "78abd0ff-9626-4e72-a7bb-12a7efbf82b9",
+              "parentUUID": "d95658a9-0448-46cb-961a-fb98d3c127c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "78abd0ff-9626-4e72-a7bb-12a7efbf82b9"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fb7b4951-f86a-4fbd-b37d-c80fa6c266b4",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestCheckoutEU.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestCheckoutEU.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33440bfd-723e-4cb9-bef2-ca6620c9076b",
+          "title": "DS Checkou EU Demo I",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Webshop EU Checkout",
+              "fullTitle": "DS Checkou EU Demo I Webshop EU Checkout",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "d3f6a4c8-0739-4b16-8b05-fa2741430be5",
+              "parentUUID": "33440bfd-723e-4cb9-bef2-ca6620c9076b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "d3f6a4c8-0739-4b16-8b05-fa2741430be5"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "25095b22-b30e-4c15-af97-56951703a61e",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestContactForm.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestContactForm.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8672cc03-75ff-4c61-8756-ccbec100036e",
+          "title": "AT Brandsite Automation Suite III",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity Contact Form",
+              "fullTitle": "AT Brandsite Automation Suite III AT Brandsite Sanity Contact Form",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "7fdacf7c-2035-4d5d-b93e-012441ad7b69",
+              "parentUUID": "8672cc03-75ff-4c61-8756-ccbec100036e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "7fdacf7c-2035-4d5d-b93e-012441ad7b69"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2d635515-be22-45a7-a929-d2975667ba14",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestGuestUserCheckout.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestGuestUserCheckout.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "810d16a4-5d69-4373-bd99-e78194dca567",
+          "title": "DS Checkout EU Demo II",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Webshop EU Guest Checkout",
+              "fullTitle": "DS Checkout EU Demo II Webshop EU Guest Checkout",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "4b385267-f715-4be2-b104-a22b0bcc7785",
+              "parentUUID": "810d16a4-5d69-4373-bd99-e78194dca567",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "4b385267-f715-4be2-b104-a22b0bcc7785"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "76615ae3-dea9-40d7-9962-61949a278933",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestOurProducts.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestOurProducts.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02fc8acd-bfcf-46f0-8b53-e13c18ef74b5",
+          "title": "AT Brandsite Automation Suite IV",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity I Middle links",
+              "fullTitle": "AT Brandsite Automation Suite IV AT Brandsite Sanity I Middle links",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6b8a81f7-ad17-4c8e-9613-36255e7660d0",
+              "parentUUID": "02fc8acd-bfcf-46f0-8b53-e13c18ef74b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "6b8a81f7-ad17-4c8e-9613-36255e7660d0"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c4866807-9cfa-4eb9-b27c-d203dc335108",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestSliderReadMore.spec.js",
+      "file": "cypress\\TestArcanetinmen\\TestSliderReadMore.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2544cd46-7af9-40fa-ba1a-ecf42037090c",
+          "title": "AT Brandsite Automation Suite V",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity II Read More",
+              "fullTitle": "AT Brandsite Automation Suite V AT Brandsite Sanity II Read More",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "80620a25-d127-454c-87c3-d753ef3f67e9",
+              "parentUUID": "2544cd46-7af9-40fa-ba1a-ecf42037090c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "80620a25-d127-454c-87c3-d753ef3f67e9"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6f4e57f9-1c58-4cc0-a0b1-eb9eff379def",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopForgotPasswword.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopForgotPasswword.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c5ff2595-eafc-4ea6-a98a-4ae37c4edf95",
+          "title": "forget password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Forgot password screen",
+              "fullTitle": "forget password Forgot password screen",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f173a99a-b9e1-4566-8fe9-cc1d53a57978",
+              "parentUUID": "c5ff2595-eafc-4ea6-a98a-4ae37c4edf95",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gets Password Reset email from Mailosaur",
+              "fullTitle": "forget password Gets Password Reset email from Mailosaur",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "4f4605fb-36a0-4ea4-b6f1-d9ea98d46738",
+              "parentUUID": "c5ff2595-eafc-4ea6-a98a-4ae37c4edf95",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "f173a99a-b9e1-4566-8fe9-cc1d53a57978",
+            "4f4605fb-36a0-4ea4-b6f1-d9ea98d46738"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

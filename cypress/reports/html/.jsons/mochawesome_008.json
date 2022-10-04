@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2022-10-02T20:01:03.906Z",
+    "end": "2022-10-02T20:01:04.028Z",
+    "duration": 122,
+    "testsRegistered": 1,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "25095b22-b30e-4c15-af97-56951703a61e",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestContactForm.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestContactForm.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8672cc03-75ff-4c61-8756-ccbec100036e",
+          "title": "AT Brandsite Automation Suite III",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity Contact Form",
+              "fullTitle": "AT Brandsite Automation Suite III AT Brandsite Sanity Contact Form",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "7fdacf7c-2035-4d5d-b93e-012441ad7b69",
+              "parentUUID": "8672cc03-75ff-4c61-8756-ccbec100036e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "7fdacf7c-2035-4d5d-b93e-012441ad7b69"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
