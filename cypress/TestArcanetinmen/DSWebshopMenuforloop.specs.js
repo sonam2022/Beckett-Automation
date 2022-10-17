@@ -8,7 +8,7 @@ describe('Visit Each menu and submenu',()=>{
 
 it.skip('Visit Menu of web shop for Solid Color Sleeves>Standard Size',function(){
 
-    const pages = ['Matte Dual 100','Matte 100', 'Perfect Fit','Matte Non-Glare 100','Classic 100']
+    const pages = ['Matte Dual 100','Matte 100', 'Perfect Fit','Matte N on-Glare 100','Classic 100']
     
     for(var i=0;i<=pages.length;i++){
 
