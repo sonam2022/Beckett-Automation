@@ -1,6 +1,6 @@
 
 import {faker} from '@faker-js/faker';
-const domainname = "qarraeah.mailosaur.net";
+ const domainname = "qarraeah.mailosaur.net";
 const emailRandom = "dorthy_schuppe@qarraeah.mailosaur.net";
 describe.skip('forget password',()=>{
 
