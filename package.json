@@ -25,7 +25,8 @@
     "cypress-mailosaur": "^2.12.0",
     "cypress-multi-reporters": "^1.6.1",
     "cypress-promise": "^1.1.0",
-    "mocha": "^10.0.0",
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.1.0",
     "mocha-junit-reporter": "^2.0.2",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
@@ -35,6 +36,8 @@
   "dependencies": {
     "@faker-js/faker": "^7.5.0",
     "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.3.6",
+    "cypress-if": "^1.9.2",
     "cypress-mochawesome-reporter": "^3.2.2",
     "cypress-recurse": "^1.23.0",
     "faker": "^5.5.3",

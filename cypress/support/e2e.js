@@ -23,7 +23,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 import 'cypress-mailosaur';
 import 'cypress-promise/register';
 import 'cypress-mochawesome-reporter/register';
-
+require('cypress-xpath');
 
 
 // Alternatively you can use CommonJS syntax:

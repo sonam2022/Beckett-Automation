@@ -1,8 +1,8 @@
-describe.skip('AT Brandsite Automation Suite I',function(){
+describe('AT Brandsite Automation Suite I',function(){
 
     before(() => {
     
-            cy.visit('/');
+            cy.visit('https://www.arcanetinmen.com');
            cy.url().should('include','arcanetinmen'),
            cy.log('Page loaded successfully')
           })
