@@ -1,4 +1,4 @@
-describe('Navigate to My Account_Order Details',()=>{
+describe.skip('Navigate to My Account_Order Details',()=>{
     beforeEach(function () {
             cy.visit('/webshop');
             cy.get('.ti-user').click();

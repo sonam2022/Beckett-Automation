@@ -1,5 +1,5 @@
 
-it('Visit Menu of web shop for Solid Color Sleeves',function(){
+it.skip('Visit Menu of web shop for Solid Color Sleeves',function(){
     cy.clearCookies();
     cy.visit('https://www.dragonshield.com/webshop/');
    

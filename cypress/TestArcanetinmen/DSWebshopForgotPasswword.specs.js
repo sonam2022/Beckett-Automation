@@ -4,7 +4,7 @@ import {faker} from '@faker-js/faker';
 const emailRandom = "dorthy_schuppe@qarraeah.mailosaur.net";
 describe.skip('forget password',()=>{
 
-it('Forgot password screen',() =>{
+it.skip('Forgot password screen',() =>{
 
 cy.visit('https://auth.dragonshield.com/Account/ForgotPassword');
 cy.get('#Email').type(emailRandom);

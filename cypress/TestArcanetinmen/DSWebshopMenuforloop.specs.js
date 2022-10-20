@@ -1,4 +1,4 @@
-describe('Visit Each menu and submenu',()=>{
+describe.skip('Visit Each menu and submenu',()=>{
 
     before(()=>{
 
