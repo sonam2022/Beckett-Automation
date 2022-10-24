@@ -1,3 +1,6 @@
+import userRegistration from '../TestArcanetinmen/PageObjects/userRegistration'
+import 'cypress-v10-preserve-cookie';
+
 import {faker} from '@faker-js/faker';
 const nameRandomf = faker.name.firstName();
 const nameRandoml = faker.name.lastName();
@@ -5,25 +8,28 @@ const domainname = "qarraeah.mailosaur.net";
 const emailRandom = faker.internet.email(nameRandomf,nameRandoml,domainname);
 const randomPass = faker.internet.password();
 
-describe.skip('User registration',function(){
+describe('User registration',function(){
 
 
-it('Register successfully done',function(){
-    cy.clearCookies()
+  const userreg = new userRegistration();
+
+it.skip('Register successfully done',function(){
     cy.visit('/webshop');
-    cy.get('.ti-user').trigger('mouseover')
-    cy.contains('Sign in/Register').click({ force: true })
-    cy.get('a').contains('REGISTER').click();
-    cy.get('#Email').type(emailRandom);
-    cy.get('#FirstName').type(nameRandomf);
-    cy.get('#LastName').type(nameRandoml);
-  cy.get('#Password').type(randomPass);
-    cy.get('#ConfirmPassword').type(randomPass);
+   cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
+
+    userreg.hoverusericon().trigger('mouseover',{ force: true})
+    userreg.clicksigninregister().click({ force: true })
+    userreg.register().click();
+   userreg.newemail().type(emailRandom);
+   userreg.newfname().type(nameRandomf);
+    userreg.newlname().type(nameRandoml);
+  userreg.pwd().type(randomPass);
+    userreg.cpwd().type(randomPass);
     cy.log(randomPass);
-    cy.get('#MarketingOptIn').check({force:true})
-    cy.get('#AcceptTC').check({force:true})
-    cy.get('button').contains('Register').click();
-    cy.contains("Greetings traveler").should("be.visible");
+    userreg.tnc().check({force:true})
+    userreg.AcceptTC().check({force:true})
+    userreg.submitnuser().click();
+    userreg.usersuccess().should("be.visible");
     cy.wait(50000);
   })
   
@@ -46,7 +52,7 @@ it('Register successfully done',function(){
                 cy.visit(accountactlink);
 
               })
-  cy.contains('Congrats, you’re all done!').should('be.visible');
+userreg.usersuccess1().should('be.visible');
   cy.contains('EU Webshop').click();
       
         })

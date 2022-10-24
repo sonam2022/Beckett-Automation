@@ -15,6 +15,9 @@
 import {faker} from '@faker-js/faker';
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+import 'cypress-v10-preserve-cookie';
+
 Cypress.on('uncaught:exception', (err, runnable) => {
 
     return false
@@ -44,3 +47,6 @@ Cypress.on("test:after:run", (test, runnable) => {
       });
 });
 
+Cypress.on("window:before:load", window => {
+  window.document.cookie = `${PHPSESSID}=${"77hfvk2s18n4j19khfq97624gd"}`;
+});
