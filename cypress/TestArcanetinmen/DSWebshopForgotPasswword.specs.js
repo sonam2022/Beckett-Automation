@@ -1,21 +1,27 @@
-
+import forgotPassword from '../TestArcanetinmen/PageObjects/forgotPassword';
 import {faker} from '@faker-js/faker';
- const domainname = "qarraeah.mailosaur.net";
-const emailRandom = "dorthy_schuppe@qarraeah.mailosaur.net";
+
 describe.skip('forget password',()=>{
+ const forpwd = new forgotPassword();
+beforeEach(function(){
 
-it.skip('Forgot password screen',() =>{
-
+cy.fixture("forgotpasswordemails.json").then(function(data){
+globalThis.emaildata = data;
 cy.visit('https://auth.dragonshield.com/Account/ForgotPassword');
-cy.get('#Email').type(emailRandom);
-cy.get('.btn').click();
+
+})
+
+it('Forgot password screen',() =>{
+
+forpwd.entermail().type(emaildata.email);
+forpwd.clickButton().click();
 cy.wait(100000);
 })
 it('Gets Password Reset email from Mailosaur', () => {
     const serverId = 'qarraeah';
-    console.log(emailRandom);
+    console.log(emaildata.email);
     cy.mailosaurGetMessage(serverId, {
-        sentTo: emailRandom
+        sentTo: emaildata.email
     }).then(email => {
         console.log(email);
         expect(email.subject).to.have.string('Reset your password');
@@ -27,16 +33,17 @@ it('Gets Password Reset email from Mailosaur', () => {
         const validPassword = faker.internet.password();
         console.log(validPassword);
         cy.contains('Reset your password').should('be.visible');
-        cy.get('#Password').type(validPassword);
-        cy.get('#ConfirmPassword').type(validPassword);
-        cy.get('.btn').click();
+        forpwd.enterpassword().type(validPassword);
+        forpwd.enterconfirmpassword() .type(validPassword);
+        forpwd.clickButton().click();
         cy.log(cy.url());
         cy.contains("Reset confirmed!").should('be.visible');
         cy.get('.btn').click();
      //   cy.visit("https://auth.dragonshield.com/Account/Login");
-        cy.get('#Email').type(emailRandom);
-            cy.get('#Password').type(validPassword);
-            cy.get('.btn').click();
+        forpwd.entermail().type(emaildata.email);
+            forpwd.enterpassword.type(validPassword);
+            forpwd.clickButton().click();
 
     })
+})
 })
