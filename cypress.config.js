@@ -40,7 +40,7 @@ module.exports = defineConfig({
     baseUrl: 'https://www.dragonshield.com', 
     excludeSpecPattern: "e2e/**/*.js",
     specPattern: "cypress/TestArcanetinmen/*.js",
-    "pageLoadTimeout": 80000,
+    "pageLoadTimeout":80000,
   
   },
     setupNodeEvents(on, config) {

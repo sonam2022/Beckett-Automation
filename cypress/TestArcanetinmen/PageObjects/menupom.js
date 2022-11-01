@@ -12,7 +12,7 @@ class mainMenu {
 
     clickOnchildSubMenu() {
         return cy.get('ul[class="level0"]')
-    };
+    }; 
 
     clickOnSubMenu(){
 
