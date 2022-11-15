@@ -1,5 +1,7 @@
 import { recurse } from 'cypress-recurse'
 
+describe.skip('Product Listing Pagination',function(){
+
 it('Visit Menu of web shop',function(){
 
     cy.clearCookies()
@@ -40,4 +42,5 @@ post(){
 })
 
 
+})
 })
