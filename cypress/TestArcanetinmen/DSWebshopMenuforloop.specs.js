@@ -1,13 +1,12 @@
 import menupom from '../TestArcanetinmen/PageObjects/menupom';
 
-describe.skip('Visit Each menu and submenu',()=>{
+describe('Visit Each menu and submenu',()=>{
 
     const menuhomepage = new menupom();
 
     before(()=>{
-
-    cy.clearCookies();
     cy.visit('/webshop');
+
     })
 
 it('Visit Menu of web shop for Solid Color Sleeves>Standard Size',function(){

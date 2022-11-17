@@ -1,14 +1,6 @@
 import { recurse } from 'cypress-recurse'
 
-describe.skip('Product Listing Pagination',()=>{
-
-beforeEach(()=>{
-
-cy.fixture("logindetails.json").then(function(data){
-
-    globalThis.logindata = data;
-
-})
+it('Visit Menu of web shop',function(){
 
 it('Product Listing Pagination',()=>{
 
@@ -48,6 +40,4 @@ post(){
 })
 
 
-})
-})
 })
