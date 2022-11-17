@@ -1,6 +1,13 @@
 import { recurse } from 'cypress-recurse'
 
-it('Visit Menu of web shop',function(){
+describe('Product Listing Pagination',function(){
+    
+beforeEach(()=>{
+
+        cy.fixture("logindetails.json").then(function(data){
+            globalThis.logindata = data;
+
+    })
 
 it('Product Listing Pagination',()=>{
 
@@ -22,7 +29,7 @@ cy.get('.leo-top-menu > .nav > .active > .nav-link > .menu-title').click({force:
 
 const product =':nth-child(1) > .product-miniature > .thumbnail-container > .product-image > .functional-buttons > .pro-info-onhover > a'
 
-recurse(
+recue(
 
     ()=> cy.get('.next'),($button)=>$button.hasClass('disabled')=='disabled',
 
@@ -39,5 +46,6 @@ post(){
 
 })
 
-
+})
+})
 })
