@@ -10,6 +10,7 @@ globalThis.emaildata = data;
 cy.visit('https://auth.dragonshield.com/Account/ForgotPassword');
 
 })
+})
 
 it('Forgot password screen',() =>{
 
@@ -45,5 +46,4 @@ it('Gets Password Reset email from Mailosaur', () => {
             forpwd.clickButton().click();
 
     })
-})
 })

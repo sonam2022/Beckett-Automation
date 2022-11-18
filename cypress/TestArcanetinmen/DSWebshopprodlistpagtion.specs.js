@@ -1,13 +1,15 @@
-import { recurse } from 'cypress-recurse'
+import { recurse } from 'cypress-recurse';
 
-describe('Product Listing Pagination',function(){
+describe('Product Listing Pagination',()=>{
     
 beforeEach(()=>{
 
         cy.fixture("logindetails.json").then(function(data){
             globalThis.logindata = data;
+            cy.log(logindata);
 
     })
+})
 
 it('Product Listing Pagination',()=>{
 
@@ -19,9 +21,9 @@ it('Product Listing Pagination',()=>{
 
 cy.contains('Sign in/Register').click({ force: true })
 
-cy.get('#Email').type(logindata.email)
+cy.get('#Email').type(logindata.email);
 
-cy.get('#Password').type(logindata.password)
+cy.get('#Password').type(logindata.password);
 
 cy.get('.btn').eq(0).click()
 
@@ -29,7 +31,7 @@ cy.get('.leo-top-menu > .nav > .active > .nav-link > .menu-title').click({force:
 
 const product =':nth-child(1) > .product-miniature > .thumbnail-container > .product-image > .functional-buttons > .pro-info-onhover > a'
 
-recue(
+recurse(
 
     ()=> cy.get('.next'),($button)=>$button.hasClass('disabled')=='disabled',
 
@@ -46,6 +48,5 @@ post(){
 
 })
 
-})
 })
 })
