@@ -7,6 +7,8 @@ module.exports = (on) => {
     // as your app's code
     webpackOptions: require('../../webpack.config'),
     watchOptions: {},
+
+    
   }
   on('file:preprocessor', webpackPreprocessor(options))
 }
