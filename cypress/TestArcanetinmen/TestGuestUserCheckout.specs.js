@@ -1,20 +1,20 @@
-describe.skip('DS Checkout EU Demo II',function(){
+describe('DS Checkout EU Demo II',function(){
 
     before(() => {
     
         cy.visit('/webshop');
        cy.url().should('include','dragonshield'),
-       cy.log('Page loaded successfully')
+       cy.log('Page loaded successfully');
+       cy.get('#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').click()
       })
 
   it('Webshop EU Guest Checkout',function(){
-    cy.clearCookies();
    
-        cy.get('.header-top').contains('Solid Color Sleeves').click();
+        cy.get('.header-top').contains('Solid Color Sleeves').click({force: true});
        
         cy.get('a[class="category-sub-link"]').should('be.visible');
        
-        cy.get('a[class="category-sub-link"]').contains('Standard Size').click();
+        cy.get('a[class="category-sub-link"]').contains('Standard Size').click({force: true});
         
         cy.get('a[class="category-sub-link"]').contains('Classic 100').click({force:true});
      

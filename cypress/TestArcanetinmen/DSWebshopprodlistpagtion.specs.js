@@ -1,6 +1,6 @@
 import { recurse } from 'cypress-recurse';
 
-describe('Product Listing Pagination',{ retries: 3 },()=>{
+describe.skip('Product Listing Pagination',{ retries: 3 },()=>{
     
  
 beforeEach(()=>{

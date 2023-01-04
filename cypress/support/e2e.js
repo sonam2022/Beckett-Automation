@@ -18,6 +18,8 @@ import './commands'
 
 import 'cypress-v10-preserve-cookie';
 
+require('date-and-time')
+
 Cypress.on('uncaught:exception', (err, runnable) => {
 
     return false
