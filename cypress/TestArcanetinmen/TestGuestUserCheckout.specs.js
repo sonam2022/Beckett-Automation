@@ -3,7 +3,8 @@ describe('DS Checkout EU Demo II',function(){
     before(() => {
     
         cy.visit('/webshop');
-       cy.url().should('include','dragonshield'),
+       cy.url().should('include','dragonshield');
+       cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
        cy.log('Page loaded successfully');
        cy.get('#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').click()
       })

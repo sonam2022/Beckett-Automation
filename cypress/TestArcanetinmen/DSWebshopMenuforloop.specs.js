@@ -1,11 +1,12 @@
 import menupom from '../TestArcanetinmen/PageObjects/menupom';
 
-describe.skip('Visit Each menu and submenu',()=>{
+describe('Visit Each menu and submenu',()=>{
 
     const menuhomepage = new menupom();
 
     before(()=>{
     cy.visit('/webshop');
+    cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
 
     })
 

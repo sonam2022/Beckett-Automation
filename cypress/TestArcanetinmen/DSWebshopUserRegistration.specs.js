@@ -8,12 +8,12 @@ const domainname = "qarraeah.mailosaur.net";
 const emailRandom = faker.internet.email(nameRandomf,nameRandoml,domainname);
 const randomPass = faker.internet.password();
 
-describe.skip('User registration',function(){
+describe('User registration',function(){
 
 
   const userreg = new userRegistration();
 
-it.skip('Register successfully done',function(){
+it('Register successfully done',function(){
     cy.visit('/webshop');
    cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
 

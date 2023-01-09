@@ -43,6 +43,7 @@ module.exports = defineConfig({
     excludeSpecPattern: "e2e/**/*.js",
     specPattern: "cypress/TestArcanetinmen/*.js",
     "pageLoadTimeout":80000,
+    //"retries": 1
   
   },
     setupNodeEvents(on, config) {

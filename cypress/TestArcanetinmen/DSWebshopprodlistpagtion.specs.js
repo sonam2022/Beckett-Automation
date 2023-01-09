@@ -1,6 +1,6 @@
 import { recurse } from 'cypress-recurse';
 
-describe.skip('Product Listing Pagination',{ retries: 3 },()=>{
+describe('Product Listing Pagination',()=>{
     
  
 beforeEach(()=>{
@@ -30,7 +30,8 @@ cy.get('.btn').eq(0).click()
 
 cy.get('.leo-top-menu > .nav > .active > .nav-link > .menu-title').click({force:true}).wait(20000)
 
-const pages = cy.get('ul[class = "page-list"] > li')
+
+const pages = cy.get(".page-list.clearfix.text-md-right.text-xs-center");
 
 const product =':nth-child(1) > .product-miniature > .thumbnail-container > .product-image > .functional-buttons > .pro-info-onhover > a'
 
@@ -47,7 +48,7 @@ length:pages.length,
 post(){
 
            cy.log("start");
-           cy.get('.next > .fa').should('be.visible').click({force:true});
+           cy.get('.next>.fa').should('be.visible').click({force:true});
    cy.log("end");
    
 }
