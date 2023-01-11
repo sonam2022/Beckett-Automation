@@ -24,11 +24,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
     return false
   });
-
+  import 'cypress-iframe';
 import 'cypress-mailosaur';
 import 'cypress-promise/register';
 import 'cypress-mochawesome-reporter/register';
 require('cypress-xpath');
+import 'cypress-file-upload';
 
 
 // Alternatively you can use CommonJS syntax:
