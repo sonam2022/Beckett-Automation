@@ -12,7 +12,7 @@ describe('Design Sleeve Crafter',function(){
          }) 
        })
 
-it('Design Sleeve Crafter',function(){
+it.skip('Design Sleeve Crafter',function(){
 
     cy.get('.btn').contains("Sleeve Crafter").click({force:true});
     cy.get('#customizecls').click();
@@ -40,7 +40,7 @@ it('Design Sleeve Crafter',function(){
 })
 
 
-it.skip("Design Sleeve Crafter",()=>{
+it("Design Sleeve Crafter",()=>{
     const p = 'newimage.jpg'
 
     cy.get('.btn').contains("Sleeve Crafter").click({force:true});
@@ -48,19 +48,24 @@ it.skip("Design Sleeve Crafter",()=>{
     cy.get('#customize').click().wait(10000);
     cy.frameLoaded('#tshirtIFrame');
     cy.iframe('#tshirtIFrame').find('span').contains("Upload design").then(($uploaddesign)=>{
-        cy.get($uploaddesign).click().wait(5000);
+        cy.get($uploaddesign).click().wait(10000);
     })
-        cy.iframe('#tshirtIFrame').find('a').contains('Browse File').then(($browsefile)=>{
-            cy.get($browsefile).attachFile(p).wait(5000); 
+
+        cy.iframe('#tshirtIFrame').find('.nx-drop-box').then(($browsefile)=>{
+            cy.get($browsefile).selectFile('cypress/fixtures/newimage.jpg', { action: 'drag-drop' }).wait(10000); 
+        })
+
+        cy.iframe('#tshirtIFrame').find('button').contains('Done').then(($done)=>{
+            cy.get($done).click().wait(10000);
         })
             cy.iframe('#tshirtIFrame').find('button').contains('Order Option').then(($order)=>{
                 cy.get($order).click().wait(10000);
             })
                 cy.iframe('#tshirtIFrame').find('.custom-control-label').contains("I approve the").then(($check)=>{
-                    cy.get($check).click().wait(5000);
+                    cy.get($check).click().wait(10000);
                 })
 cy.iframe('#tshirtIFrame').find('.cart-text').contains('Add to cart').then(($order2)=>{
-                cy.get($order2).click({force:true}).wait(5000);
+                cy.get($order2).click({force:true}).wait(10000);
 })
                 cy.get('a').contains('Sleeve Crafter').should('be.visible');
 })
