@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('solveGoogleReCAPTCHA', () => {
+    cy.get('iframe')
+        .first()
+        .then((recaptchaIframe) => {
+            const body = recaptchaIframe.contents()
+            cy.wrap(body).find('.recaptcha-checkbox').should('exist').click()
+        })
+})

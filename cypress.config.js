@@ -34,14 +34,14 @@ module.exports = defineConfig({
   },
   
     env: {
-    MAILOSAUR_API_KEY: "DAe2srWZX2Us3ShX",
+    MAILOSAUR_API_KEY: "GTcqU1sPsMKGUkMsaQLhkbChtTuKykp0",
       MAILOSAUR_BASE_URL:"https://mailosaur.com/",
     },
 
   e2e: {
-    baseUrl: 'https://www.dragonshield.com', 
+    baseUrl: 'https://www.beckett.com', 
     excludeSpecPattern: "e2e/**/*.js",
-    specPattern: "cypress/TestArcanetinmen/*.js",
+    specPattern: "cypress/TestBeckett/*.js",
     "pageLoadTimeout":80000,
     //"retries": 1
   
