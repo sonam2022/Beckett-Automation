@@ -200,6 +200,7 @@ console.log("no record found")
 
 
  })
+
  it('Pricing Pop Up',()=>{
   cy.visit("/login")
   login.email().type(emaildata.email);
@@ -213,27 +214,8 @@ console.log("no record found")
    cy.wait(30000);
    opgsearch.searchresults().should('be.visible');
  opgsearch.pricingpopup().eq(10).click();
- opgsearch.mdrpopupview().should('be.visible')
- cy.get('.table-responsive').then(($element)=>{
-if($element.is(':visible')){
-  opgsearch.mdritemname().then(($title)=>{
- console.log($title.text())
- opgsearch.mdrpopupgraded().click()
+ opgsearch.conditionalpricing().should('be.visible')
+ opgsearch.gradedpricing().click()
   })
-
-}
-else{
-
-console.log("no record found")
-
-}
-
-
-
- })
-
 })
-})
-
-
 })
