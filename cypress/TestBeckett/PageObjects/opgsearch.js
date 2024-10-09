@@ -113,7 +113,7 @@ pricingpopup(){
 
 gradedpricing(){
 
-    return cy.get('a').contains('Graded Pricing')
+    return cy.get('.nav-link').contains('Graded Pricing')
 
 
 }
@@ -122,6 +122,36 @@ conditionalpricing(){
 
     return cy.get('#viewOrganize-body')
 }
+
+filterattr(){
+
+    return cy.get('#attr1')
+}
+
+applyattr(){
+
+    return cy.get('[rel="searchLink__attr"]')
+}
+
+filtercollege(){
+
+    return cy.get("#college10")
+}
+
+applycollegr(){
+
+    return cy.get('[rel="searchLink__college"]')
+}
+filersport(){
+
+    return cy.get("#sport1")
+}
+
+applysport(){
+
+    return cy.get('[rel="searchLink__sport"]')
+}
+
 }
 
 export default OPGSearch;

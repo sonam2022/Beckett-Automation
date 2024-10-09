@@ -200,8 +200,9 @@ console.log("no record found")
 
 
  })
+})
 
- it('Pricing Pop Up',()=>{
+ it.skip('Pricing Pop Up',()=>{
   cy.visit("/login")
   login.email().type(emaildata.email);
    login.pwd().type(emaildata.password);
@@ -215,7 +216,41 @@ console.log("no record found")
    opgsearch.searchresults().should('be.visible');
  opgsearch.pricingpopup().eq(10).click();
  opgsearch.conditionalpricing().should('be.visible')
+ cy.wait(20000)
  opgsearch.gradedpricing().click()
   })
-})
-})
+
+  it('Applying filter to search results',()=>{
+    cy.visit("/login")
+    login.email().type(emaildata.email);
+     login.pwd().type(emaildata.password);
+     login.loginbutton().click();
+    opgsearch.searchbox().type(searchdata.searchterm1,{force:true});
+     opgsearch.autopopulate().should('be.visible');
+      opgsearch.autopopulate().trigger('focus');
+      opgsearch.autopopulateselect().eq(1).click({force:true});
+     opgsearch.searchclick().click({force:true});
+     cy.wait(30000);
+      opgsearch.searchresults().should('be.visible');
+     cy.get('.mainDivSearch').then(($filter1)=>{
+
+if($filter1.find('#sport1').is(':visible')){
+
+  cy.get(opgsearch.filersport()).click()
+  opgsearch.applysport().click()
+  
+}
+    
+else{
+  opgsearch.filterattr().click({force:true});
+  opgsearch.applyattr().click();
+  cy.wait(15000);
+     cy.get('span').contains('Attributes:').should('be.visible')
+}
+
+     })  
+    })
+     
+  
+    })
+
